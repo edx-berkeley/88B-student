@@ -1,0 +1,74 @@
+version: 1
+project:
+  title: DATA 88B Materials
+  description: Public lab notebooks for DATA 88B Economic Analysis for Business Decisions,
+    UC Berkeley edX xSeries
+  authors:
+  - name: DATA 88B Course Staff
+  github: edx-berkeley/88B-student
+  license: CC-BY-NC-4.0
+  jupyter:
+    binder:
+      repo: edx-berkeley/88B-student
+      ref: main
+      url: https://mybinder.org
+    kernelName: python3
+  exclude:
+  - README.md
+  - LICENSE.md
+  toc:
+  - file: intro.md
+  - title: Part 1 — Data Exploration
+    children:
+    - title: 'Lab A: Data Management'
+      file: lab/1/lab01/lab01.ipynb
+    - title: 'Lab B: Probability & Average'
+      file: lab/1/lab02/lab02.ipynb
+    - title: 'Lab C1: Weighted Average'
+      file: lab/1/lab03/lab03.ipynb
+    - title: 'Lab C2: Weighted Average'
+      file: lab/1/lab04/lab04.ipynb
+    - title: 'Lab C3: Weighted Average'
+      file: lab/1/lab05/lab05.ipynb
+    - title: 'Lab D: Data Visualization'
+      file: lab/1/lab06/lab06.ipynb
+    - title: 'Lab E: Simulation'
+      file: lab/1/lab07/lab07.ipynb
+  - title: Part 2 — Inferential Statistics
+    children:
+    - title: 'Lab F: One-Sample t Hypothesis Test'
+      file: lab/2/lab01/lab01.ipynb
+    - title: 'Lab G: Two-Sample t Hypothesis Test'
+      file: lab/2/lab02/lab02.ipynb
+    - title: 'Lab G: ANOVA Test'
+      file: lab/2/lab03/lab03.ipynb
+    - title: 'Lab H: Confidence Interval'
+      file: lab/2/lab04/lab04.ipynb
+    - title: 'Lab I: A/B Causality Test'
+      file: lab/2/lab05/lab05.ipynb
+    - title: 'Lab J1: Chi-Squared Test for Uniform Probabilities'
+      file: lab/2/lab06/lab06.ipynb
+    - title: 'Lab J2: Chi-Squared Test for Specific Probabilities'
+      file: lab/2/lab07/lab07.ipynb
+    - title: 'Lab J3: Chi-Squared Test for Independence'
+      file: lab/2/lab08/lab08.ipynb
+  - title: Part 3 — Linear Regression
+    children:
+    - title: 'Lab K in-class: Linear Regression'
+      file: lab/3/lab01/lab01.ipynb
+    - title: 'Lab L: Nonlinearity'
+      file: lab/3/lab02/lab02.ipynb
+    - title: 'Lab M1: Discontinuity'
+      file: lab/3/lab03/lab03.ipynb
+    - title: 'Lab M2: Seasonality'
+      file: lab/3/lab04/lab04.ipynb
+    - title: 'Lab N: Interaction'
+      file: lab/3/lab05/lab05.ipynb
+site:
+  template: book-theme
+  options:
+    favicon: favicon.ico
+    logo_text: DATA 88B Materials
+    hide_authors: true
+    hide_myst_branding: true
+    hide_outline: false
