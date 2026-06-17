@@ -23,9 +23,9 @@ EXIT_SUCCESS = 0
 EXIT_ERROR = 2
 
 PART_TITLES = {
-    "1": "Part 1 — Data Exploration",
-    "2": "Part 2 — Inferential Statistics",
-    "3": "Part 3 — Linear Regression",
+    "1": "Part 1 - Data Exploration",
+    "2": "Part 2 - Inferential Statistics",
+    "3": "Part 3 - Linear Regression",
 }
 
 
