@@ -1,6 +1,8 @@
 # Jupyter Book (MyST) GitHub Pages Deploy
 # Ensure your GitHub Pages settings for this repository are set to deploy with GitHub Actions.
 # On push to main, syncs myst.yml TOC with notebooks on disk, then builds and deploys.
+# myst.yml is not auto-committed (main is protected); run .github/sync-myst-toc.py locally
+# and open a PR if the sync step reports drift.
 
 name: Jupyter Book (MyST) GitHub Pages Deploy
 
@@ -14,7 +16,7 @@ env:
   BASE_URL: /${{ github.event.repository.name }}
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -30,20 +32,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Sync myst.yml TOC with notebooks
         run: |
           pip install pyyaml --quiet
           python3 .github/sync-myst-toc.py
-      - name: Commit and push updated myst.yml
+      - name: Check myst.yml is up to date
         run: |
           if ! git diff --exit-code myst.yml >/dev/null; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add myst.yml
-            git commit -m "chore: sync myst.yml TOC with notebooks"
-            git push
+            echo "::warning::myst.yml is out of sync with notebooks on disk."
+            echo "Run 'python .github/sync-myst-toc.py' locally, commit myst.yml, and open a PR."
+            git diff myst.yml
           fi
       - name: Setup Pages
         uses: actions/configure-pages@v3

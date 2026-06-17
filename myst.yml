@@ -18,7 +18,7 @@ project:
   - LICENSE.md
   toc:
   - file: intro.md
-  - title: Part 1 - Data Exploration
+  - title: Part 1 — Data Exploration
     children:
     - title: 'Lab A: Data Management'
       file: lab/1/lab01/lab01.ipynb
@@ -34,7 +34,7 @@ project:
       file: lab/1/lab06/lab06.ipynb
     - title: 'Lab E: Simulation'
       file: lab/1/lab07/lab07.ipynb
-  - title: Part 2 - Inferential Statistics
+  - title: Part 2 — Inferential Statistics
     children:
     - title: 'Lab F: One-Sample t Hypothesis Test'
       file: lab/2/lab01/lab01.ipynb
@@ -52,7 +52,7 @@ project:
       file: lab/2/lab07/lab07.ipynb
     - title: 'Lab J3: Chi-Squared Test for Independence'
       file: lab/2/lab08/lab08.ipynb
-  - title: Part 3 - Linear Regression
+  - title: Part 3 — Linear Regression
     children:
     - title: 'Lab K in-class: Linear Regression'
       file: lab/3/lab01/lab01.ipynb
